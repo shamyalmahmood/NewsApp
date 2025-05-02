@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({setCategory}) => {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -11,10 +11,22 @@ const Navbar = () => {
                     
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
-                            <a className="nav-link" href="#">Features</a>
-                            <a className="nav-link" href="#">Pricing</a>
-                            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <div className="nav-link" onClick= {()=>setCategory("technology")} href="#">Technology</div>
+                        </div>
+                        <div className="navbar-nav">
+                            <div className="nav-link"  onClick= {()=>setCategory("business")} href="#">Business</div>
+                        </div>
+                        <div className="navbar-nav">
+                            <div className="nav-link"  onClick= {()=>setCategory("health")} href="#">Health</div>
+                        </div>
+                        <div className="navbar-nav">
+                            <div className="nav-link"  onClick= {()=>setCategory("science")} href="#">Science</div>
+                        </div>
+                        <div className="navbar-nav">
+                            <div className="nav-link"  onClick= {()=>setCategory("sports")} href="#">Sports</div>
+                        </div>
+                        <div className="navbar-nav">
+                            <div className="nav-link"  onClick= {()=>setCategory("entertainment")} href="#">Entertainment</div>
                         </div>
                     </div>
                 </div>
